@@ -2,7 +2,7 @@ class SupportsController < ApplicationController
   def index
     @support = Support.new
     # @supports = Support.order("created_at")
-    @supports = Support.paginate(:page => params[:page], :per_page => 7)
+    @supports = Support.order("updated_at desc").paginate(:page => params[:page], :per_page => 7)
   end
 
   def create
@@ -52,9 +52,9 @@ class SupportsController < ApplicationController
 
   def search
     if params[:search]
-      @supports = Support.all.search(params[:search][0]).paginate(:page => params[:page], :per_page => 7)
+      @supports = Support.all.order("updated_at desc").search(params[:search][0]).paginate(:page => params[:page], :per_page => 7)
     else
-      @supports = Support.paginate(:page => params[:page], :per_page => 7)
+      @supports = Support.order("updated_at desc").paginate(:page => params[:page], :per_page => 7)
     end
   end
 end

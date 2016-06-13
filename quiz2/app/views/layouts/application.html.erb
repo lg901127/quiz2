@@ -6,25 +6,24 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <style>
-  .support-name {
-    border: 2px solid black;
+  table, th, td {
+    border: 1px solid black;
+  }
+  table {
+    float: left;
+    clear: both;
+  }
+  .pagination {
     float: left;
   }
-  .support-email {
-    border: 2px solid black;
+  .support-requests-title {
     float: left;
+    margin-top: auto;
+    margin-right: 20px;
   }
-  .support-department {
-    border: 2px solid black;
+  .search-bar {
     float: left;
-  }
-  .support-message {
-    border: 2px solid black;
-    float: left;
-  }
-  .support-action {
-    border: 2px solid black;
-    float: left;
+    /*clear: both;*/
   }
   </style>
 </head>

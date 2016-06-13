@@ -1,4 +1,10 @@
 <h1>Search</h1>
+<%= form_tag search_support_path, method: :get do %>
+  <p>
+    <%= text_field :search, params[:search][0], placeholder: params[:search][0] %>
+    <%= submit_tag "Search", name: :nil %>
+  </p>
+<% end %>
 <hr>
 <table>
    <tr>
@@ -21,4 +27,4 @@
    </tr>
      <% end %>
  </table>
-<%= will_paginate @supports %>
+<div class="pagination"><%= will_paginate @supports %></div>

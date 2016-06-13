@@ -26,13 +26,15 @@
   <%= f.submit "Save" %>
 <% end %>
 <hr>
+<h1 class="support-requests-title">Support Requests</h1>
+<div class="search-bar">
 <%= form_tag search_support_path, method: :get do %>
   <p>
     <%= text_field :search, params[:search] %>
     <%= submit_tag "Search", name: :nil %>
   </p>
 <% end %>
-<h1>Support Requests</h1>
+</div>
 <table>
    <tr>
      <th>Name</th>
@@ -54,4 +56,4 @@
    </tr>
      <% end %>
  </table>
-<%= will_paginate @supports %>
+<div class="pagination"><%= will_paginate @supports %></div>
