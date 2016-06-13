@@ -1,0 +1,24 @@
+<h1>Search</h1>
+<hr>
+<table>
+   <tr>
+     <th>Name</th>
+     <th>Email</th>
+     <th>Department</th>
+     <th>Message</th>
+     <th>Action</th>
+   </tr>
+   <% @supports.each do |support| %>
+   <tr>
+     <td><%= support.name %></td>
+     <td><%= support.email %></td>
+     <td><%= support.department %></td>
+     <td><%= support.message %></td>
+     <td><%= link_to "Edit", edit_support_path(support) %>
+         <%= link_to "Delete", support_path(support), method: :delete, data: {confirm: "Are you sure?"} %>
+         <%= link_to "#{support.done_undone}", mark_path(support), method: :patch %>
+     </td>
+   </tr>
+     <% end %>
+ </table>
+<%= will_paginate @supports %>

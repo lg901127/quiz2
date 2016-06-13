@@ -1,0 +1,10 @@
+<div>
+  <%= form_for @support do |f| %>
+    <%= f.label "Request Status" %>
+    <%= f.radio_button :done_undone, "Done" %>
+    <%= f.label :done_undone, "Done" %>
+    <%= f.radio_button :done_undone, "Undone" %>
+    <%= f.label :done_undone, "Undone" %>
+    <%= f.submit "Mark" %>
+  <% end %>
+</div>

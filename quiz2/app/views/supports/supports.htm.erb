@@ -1,0 +1,27 @@
+<h1>Support Requests</h1>
+<div class="header">Name</div>
+<div class="header">Email</div>
+<div class="header">Department</div>
+<div class="header">Message</div>
+<div class="header">Actions</div>
+<hr>
+<div class="support-name">
+<% @supports.each do |support| %>
+  <%= support.name %><br>
+<% end %>
+</div>
+<div class="support-email">
+<% @supports.each do |support| %>
+  <%= support.email %><br>
+<% end %>
+</div>
+<div class="support-department">
+<% @supports.each do |support| %>
+  <%= support.department %><br>
+<% end %>
+</div>
+<div class="support-message">
+<% @supports.each do |support| %>
+  <%= support.message %><br>
+<% end %>
+</div>

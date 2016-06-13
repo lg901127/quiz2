@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz2</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <style>
+  .support-name {
+    border: 2px solid black;
+    float: left;
+  }
+  .support-email {
+    border: 2px solid black;
+    float: left;
+  }
+  .support-department {
+    border: 2px solid black;
+    float: left;
+  }
+  .support-message {
+    border: 2px solid black;
+    float: left;
+  }
+  .support-action {
+    border: 2px solid black;
+    float: left;
+  }
+  </style>
+</head>
+<body>
+<%= link_to "Home", supports_path %>
+|
+
+<%= yield %>
+
+</body>
+</html>
